@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Messaging App — Project Requirements
 
-## Getting Started
+## Core Requirements
 
-First, run the development server:
+### 1. Authorization
+- [ ] User registration
+- [ ] User login
+- [ ] Protected application areas
+- [ ] User authorization
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 2. Messaging
+- [ ] Send messages to another user
+- [ ] View messages in a conversation
+- [ ] Identify the sender of each message
+- [ ] Support one-to-one conversations
+- [ ] Real-time messaging is **not required**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. User Profiles
+- [ ] Customize user profile
+- [ ] Allow users to update appropriate profile information
+- [ ] Allow users to customize their avatar/profile image
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Planning
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Before implementation, plan:
 
-## Learn More
+- [ ] User interface and overall application layout
+- [ ] Data model and relationships
+- [ ] Required libraries
+- [ ] Backend architecture/functionality
+- [ ] Frontend architecture/functionality
 
-To learn more about Next.js, take a look at the following resources:
+## Technical Requirements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Build a backend
+- [ ] Build a frontend
+- [ ] Implement core functionality in the backend
+- [ ] Connect the frontend to the backend
+- [ ] Use a REST API
+- [ ] Deploy the application to the web
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Extra Credit
 
-## Deploy on Vercel
+### Image Messages
+- [ ] Allow users to upload images
+- [ ] Allow users to send images in chat
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Friends / Users List
+Choose either:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Allow users to add other users as friends
+- [ ] Allow users to see when friends are online
+
+OR:
+
+- [ ] Provide a users list
+- [ ] Show which users are currently online
+
+### Group Chats
+- [ ] Allow users to create group chats
+- [ ] Allow users to send messages in group chats
+
+## Final Feature Checklist
+
+### Required
+- [ ] User registration
+- [ ] User login / authorization
+- [ ] Protected routes
+- [ ] User profile customization
+- [ ] One-to-one conversations
+- [ ] Sending messages
+- [ ] Viewing conversation messages
+- [ ] REST API backendfile:///data/user/0/com.foxdebug.acode/files/public/messaging-app/README.md
+- [ ] Frontend connected to backend
+- [ ] Web deployment
+
+### Optional
+- [ ] Image messages
+- [ ] Friends system
+- [ ] Online/offline status
+- [ ] Users list
+- [ ] Group chats
+- [ ] Real-time messaging

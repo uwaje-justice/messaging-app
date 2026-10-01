@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =========================================================
+   Theme
+   ========================================================= */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-plus-jakarta);
+  --font-heading: var(--font-manrope);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  /* Primary */
+  --color-primary: #075e54;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d9fdd3;
+  --color-on-primary-container: #00382f;
+
+  /* Surface */
+  --color-surface: #ffffff;
+  --color-on-surface: #111b21;
+  --color-surface-container: #f0f2f5;
+  --color-surface-container-high: #e9edef;
+
+  /* Background */
+  --color-background: #f0f2f5;
+  --color-on-background: #111b21;
+
+  /* Outline */
+  --color-outline: #8696a0;
+  --color-outline-variant: #d1d7db;
+
+  /* Status */
+  --color-success: #25d366;
+  --color-on-success: #ffffff;
+
+  --color-error: #ea4335;
+  --color-on-error: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-on-warning: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  /* Primary */
+  --color-primary: #00a884;
+  --color-on-primary: #00382f;
+  --color-primary-container: #005c4b;
+  --color-on-primary-container: #a8f2df;
+
+  /* Surface */
+  --color-surface: #202c33;
+  --color-on-surface: #e9edef;
+  --color-surface-container: #111b21;
+  --color-surface-container-high: #2a3942;
+
+  /* Background */
+  --color-background: #111b21;
+  --color-on-background: #e9edef;
+
+  /* Outline */
+  --color-outline: #8696a0;
+  --color-outline-variant: #374751;
+
+  /* Status */
+  --color-success: #25d366;
+  --color-on-success: #00382f;
+
+  --color-error: #f15c6d;
+  --color-on-error: #3b0710;
+
+  --color-warning: #fbbf24;
+  --color-on-warning: #422006;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-outline-variant);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-sans), Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  img,
+  svg {
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================================
+   Layout
+   ========================================================= */
+
+@layer components {
+  .wrap {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+
+  .primary-gradient {
+    background: linear-gradient(135deg, #075e54 0%, #008f7a 50%, #25d366 100%);
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-block: 4rem;
+    }
+  }
 }
