@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo.tsx";
+import Logo from "./Logo";
 
 const navItems = [
   { label: "Home", href: "/" },

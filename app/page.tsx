@@ -1,8 +1,8 @@
-import Features from "./components/Features.tsx";
-import Hero from "./components/Hero.tsx";
-import Footer from "./components/Footer.tsx";
-import Cta from "./components/Cta.tsx";
-import Header from "./components/Header.tsx";
+import Features from "./components/Features";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import Cta from "./components/Cta";
+import Header from "./components/Header";
 
 const Home = () => {
   return (
